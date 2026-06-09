@@ -1,0 +1,21 @@
+<?php
+
+$urls = [
+    "https://example1.com",
+    "https://example2.com",
+    "https://example3.com",
+    "https://example4.com",
+    "https://example5.com",
+    "https://example6.com",
+    "https://example7.com",
+    "https://example8.com",
+    "https://example9.com",
+    "https://example10.com"
+];
+
+$url = $urls[array_rand($urls)];
+
+header("Location: $url");
+exit;
+
+?>
