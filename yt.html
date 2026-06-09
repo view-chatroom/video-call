@@ -1,6 +1,12 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect</title>
+</head>
+<body>
 
-$urls = [
+<script>
+const urls = [
     "https://example1.com",
     "https://example2.com",
     "https://example3.com",
@@ -13,9 +19,10 @@ $urls = [
     "https://example10.com"
 ];
 
-$url = $urls[array_rand($urls)];
+const randomUrl = urls[Math.floor(Math.random() * urls.length)];
 
-header("Location: $url");
-exit;
+window.location.href = randomUrl;
+</script>
 
-?>
+</body>
+</html>
