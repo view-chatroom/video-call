@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <base href="landers/2647c3d4eb/white_xxx2_multi/index.html" /> -->
+
+    <meta charset="utf-8" />
+    <title id="a1">Video Loading...</title>
+    <link rel="shortcut icon" href="https://storepopundersourcetrue.com/landers/land5/ad-landing/favicon.png" type="image/png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+    <link rel="stylesheet" href="https://storepopundersourcetrue.com/landers/land5/ad-landing/common.css" />
+    <meta
+      name="theme-color"
+      content="#000000"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#000000"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta content="no-referrer" name="referrer" />
+  </head>
+
+  <body onload="translate();">
+    <a class="link_wrapper" href="{offer_link}"></a>
+    <div id="main_div" style="display: block">
+      <div class="page">
+        <div class="top">
+          <div class="switch">
+            <div></div>
+          </div>
+          <div class="settings"></div>
+        </div>
+        <div class="bottom">
+          <div class="time-top">
+            <div>0:00 <span>/ 14:29</span></div>
+            <div class="fullscreen"></div>
+          </div>
+          <div class="time-line">
+            <div></div>
+          </div>
+        </div>
+        <div class="loader">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="modal" style="display: flex">
+        <div class="modal-content">
+          <div class="modal-top">
+            <div class="modal-title" id="modal-title">
+              <span id="a2">Video might be unavailable</span>
+              <br />
+              <b id="a3"
+                >Please Install <span>VPN App</span> and watch video without
+                ads</b
+              >
+            </div>
+            <div class="modal-text" id="a4">
+              Install to skip ads anytime, anywhere
+            </div>
+            <div class="modal-text recommended" id="a5">• Recommended •</div>
+          </div>
+          <div class="modal-btns">
+            <div class="modal-btn" id="a6">Cancel</div>
+            <div class="modal-btn" id="a7">Install</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <a
+      href="/click.php?lp=1&uclick=gxbgci3vbl"
+      class="exit"
+      style="
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+      "
+    ></a> -->
+
+    <script>
+      function getURLParameter(name) {
+        return decodeURIComponent(
+          (RegExp(name + "=" + "(.+?)(&|$)").exec(location.search) || [
+            ,
+            null,
+          ])[1] || ""
+        );
+      }
+
+      const translation = {
+        source: {
+          a1: "Loading...",
+          a2: "Video might be unavailable",
+          a3: "Please Install <span>VPN App</span> and watch video without ads",
+          a4: "Install to skip ads anytime, anywhere",
+          a5: "• Recommended •",
+          a6: "Cancel",
+          a7: "Install",
+        },
+        ab: {
+          // Abkhazian
+          a1: "Аԥшәыԥсра...",
+          a2: "Видео ианеизымкәа иҟалоит",
+          a3: "Иахьагьы <span>VPN апп</span> иуҳәаны, абжьы ацырдыруа видео иҳәоит",
+          a4: "Ацырымкәа ицура аиуит",
+          a5: "• Аиааира •",
+          a6: "Иашо",
+          a7: "Иуҳәан",
+        },
+        az: {
+          // Azerbaijani
+          a1: "Yüklənir...",
+          a2: "Video əlçatan olmaya bilər",
+          a3: "Zəhmət olmasa <span>VPN Tətbiqini</span> quraşdırın və reklamsız video izləyin",
+          a4: "Reklamlardan qaçmaq üçün istənilən vaxt quraşdırın",
+          a5: "• Tövsiyə olunur •",
+          a6: "Ləğv et",
+          a7: "Quraşdır",
+        },
+        sq: {
+          // Albanian
+          a1: "Duke u ngarkuar...",
+          a2: "Video mund të mos jetë në dispozicion",
+          a3: "Ju lutem instaloni <span>Aplikacionin VPN</span> dhe shikoni videon pa reklama",
+          a4: "Instaloni për të anashkaluar reklamat kudo dhe në çdo kohë",
+          a5: "• E rekomanduar •",
+          a6: "Anulo",
+          a7: "Instalo",
+        },
+        ar: {
+          // Arabic
+          a1: "جار التحميل...",
+          a2: "قد يكون الفيديو غير متاح",
+          a3: "يرجى تثبيت <span>تطبيق VPN</span> ومشاهدة الفيديو بدون إعلانات",
+          a4: "قم بالتثبيت لتخطي الإعلانات في أي وقت وأي مكان",
+          a5: "• موصى به •",
+          a6: "إلغاء",
+          a7: "تثبيت",
+        },
+        hy: {
+          // Armenian
+          a1: "Բեռնվում է...",
+          a2: "Վիդեոն հնարավոր է մատչելի չէ",
+          a3: "Խնդրում ենք տեղադրել <span>VPN հավելվածը</span> և դիտել վիդեոն առանց գովազդների",
+          a4: "Տեղադրեք՝ գովազդները շրջանցելու համար ցանկացած պահի, ցանկացած վայրում",
+          a5: "• Խորհուրդ է տրվում •",
+          a6: "Չեղարկել",
+          a7: "Տեղադրել",
+        },
+        af: {
+          // Afrikaans
+          a1: "Laai tans...",
+          a2: "Video mag dalk nie beskikbaar wees nie",
+          a3: "Installeer asseblief die <span>VPN-toep</span> en kyk video sonder advertensies",
+          a4: "Installeer om advertensies te slaag enige tyd, enige plek",
+          a5: "• Aanbeveel •",
+          a6: "Kanselleer",
+          a7: "Installeer",
+        },
+        ba: {
+          // Bashkir
+          a1: "Йөкләнә...",
+          a2: "Видео ҡулланыуға булмауы мөмкин",
+          a3: "Зинһар, <span>VPN ҡушымтаһын</span> ҡуйығыҙ һәм рекламаһыҙ видеоны ҡарағыҙ",
+          a4: "Рекламаларҙы үтеп үтеү өсөн ҡушымтаны теләһә ҡайһы ваҡытта һәм урында ҡуйығыҙ",
+          a5: "• Тәҡдим ителә •",
+          a6: "Туҡтатыу",
+          a7: "Ҡуйыу",
+        },
+        be: {
+          // Belarusian
+          a1: "Загрузка...",
+          a2: "Відэа можа быць недаступным",
+          a3: "Калі ласка, усталюйце <span>VPN праграму</span> і глядзіце відэа без рэкламы",
+          a4: "Усталюйце, каб праглядаць без рэкламы ў любы час і дзе заўгодна",
+          a5: "• Рэкамендавана •",
+          a6: "Адмяніць",
+          a7: "Усталяваць",
+        },
+        bn: {
+          // Bengali
+          a1: "লোড হচ্ছে...",
+          a2: "ভিডিও উপলব্ধ নাও হতে পারে",
+          a3: "দয়া করে <span>VPN অ্যাপ</span> ইনস্টল করুন এবং বিজ্ঞাপন ছাড়া ভিডিও দেখুন",
+          a4: "যেকোনো সময়, যেকোনো জায়গায় বিজ্ঞাপন এড়াতে ইনস্টল করুন",
+          a5: "• সুপারিশকৃত •",
+          a6: "বাতিল করুন",
+          a7: "ইনস্টল করুন",
+        },
+        bg: {
+          // Bulgarian
+          a1: "Зареждане...",
+          a2: "Видеото може да не е налично",
+          a3: "Моля, инсталирайте <span>VPN приложението</span> и гледайте видеото без реклами",
+          a4: "Инсталирайте, за да пропускате реклами навсякъде и по всяко време",
+          a5: "• Препоръчително •",
+          a6: "Отказ",
+          a7: "Инсталирай",
+        },
+        zh: {
+          // Chinese (Simplified)
+          a1: "加载中...",
+          a2: "视频可能不可用",
+          a3: "请安装 <span>VPN 应用</span>，免费观看无广告视频",
+          a4: "安装以随时跳过广告",
+          a5: "• 推荐 •",
+          a6: "取消",
+          a7: "安装",
+        },
+        hr: {
+          // Croatian
+          a1: "Učitavanje...",
+          a2: "Video možda nije dostupan",
+          a3: "Molimo instalirajte <span>VPN aplikaciju</span> i gledajte video bez reklama",
+          a4: "Instalirajte za preskakanje reklama bilo kada, bilo gdje",
+          a5: "• Preporučeno •",
+          a6: "Odustani",
+          a7: "Instaliraj",
+        },
+        cs: {
+          // Czech
+          a1: "Načítání...",
+          a2: "Video nemusí být k dispozici",
+          a3: "Nainstalujte prosím <span>VPN aplikaci</span> a sledujte video bez reklam",
+          a4: "Nainstalujte pro přeskočení reklam kdykoli a kdekoli",
+          a5: "• Doporučeno •",
+          a6: "Zrušit",
+          a7: "Nainstalovat",
+        },
+        da: {
+          // Danish
+          a1: "Indlæser...",
+          a2: "Video kan være utilgængelig",
+          a3: "Installer venligst <span>VPN-app</span> og se video uden reklamer",
+          a4: "Installer for at springe reklamer over når som helst, hvor som helst",
+          a5: "• Anbefalet •",
+          a6: "Annuller",
+          a7: "Installer",
+        },
+        nl: {
+          // Dutch
+          a1: "Bezig met laden...",
+          a2: "Video is mogelijk niet beschikbaar",
+          a3: "Installeer <span>VPN-app</span> en kijk video zonder advertenties",
+          a4: "Installeer om advertenties overal en altijd over te slaan",
+          a5: "• Aanbevolen •",
+          a6: "Annuleer",
+          a7: "Installeren",
+        },
+        en: {
+          // English
+          a1: "Loading...",
+          a2: "Video might be unavailable",
+          a3: "Please Install <span>VPN App</span> and watch video without ads",
+          a4: "Install to skip ads anytime, anywhere",
+          a5: "• Recommended •",
+          a6: "Cancel",
+          a7: "Install",
+        },
+        fj: {
+          // Fiji
+          a1: "Sa toso tiko...",
+          a2: "E rawa ni sega ni yaga na vidio",
+          a3: "Kerekere mo vakayagataka na <span>VPN App</span> ka raica na vidio sega ni vakayagataki iko",
+          a4: "Vakacuruma me vosota na reklamu ena gauna taucoko kei na vanua kece",
+          a5: "• Tavaki •",
+          a6: "Sega ni cakava",
+          a7: "Vakacuruma",
+        },
+        fl: {
+          // Filipino (Tagalog)
+          a1: "Naglo-load...",
+          a2: "Maaaring hindi available ang video",
+          a3: "Mangyaring i-install ang <span>VPN App</span> at panoorin ang video nang walang ads",
+          a4: "I-install para laktawan ang ads kahit saan at kailanman",
+          a5: "• Inirerekomenda •",
+          a6: "Kanselahin",
+          a7: "I-install",
+        },
+        fi: {
+          // Finnish
+          a1: "Ladataan...",
+          a2: "Video saattaa olla saatavilla",
+          a3: "Asenna <span>VPN-sovellus</span> ja katso video ilman mainoksia",
+          a4: "Asenna ohittaaksesi mainokset milloin ja missä tahansa",
+          a5: "• Suositellaan •",
+          a6: "Peruuta",
+          a7: "Asenna",
+        },
+        fr: {
+          // French
+          a1: "Chargement...",
+          a2: "La vidéo peut être indisponible",
+          a3: "Veuillez installer l'<span>application VPN</span> et regarder la vidéo sans publicité",
+          a4: "Installez pour passer les publicités à tout moment, où que vous soyez",
+          a5: "• Recommandé •",
+          a6: "Annuler",
+          a7: "Installer",
+        },
+        fy: {
+          // Frisian
+          a1: "Laden...",
+          a2: "Fideo kin net beskikber wêze",
+          a3: "Installearje asjebleaft de <span>VPN-app</span> en besjoch fideo sûnder advertinsjes",
+          a4: "Ynstallearje om advertinsjes oeral en altyd oer te slaan",
+          a5: "• Aanrikkemandearre •",
+          a6: "Annulearje",
+          a7: "Ynstallearje",
+        },
+        et: {
+          // Estonian
+          a1: "Laadimine...",
+          a2: "Video ei pruugi olla saadaval",
+          a3: "Palun installi <span>VPN rakendus</span> ja vaata videot ilma reklaamideta",
+          a4: "Installeeri, et reklaame igal ajal ja kohas vahele jätta",
+          a5: "• Soovitatud •",
+          a6: "Tühista",
+          a7: "Installi",
+        },
+        ka: {
+          // Georgian
+          a1: "იტვირთება...",
+          a2: "ვიდეო შეიძლება მიუწვდომელი იყოს",
+          a3: "გთხოვთ დააინსტალირეთ <span>VPN აპი</span> და უყურეთ ვიდეოს რეკლამების გარეშე",
+          a4: "დააინსტალირეთ, რომ ნებისმიერ დროს და ნებისმიერ ადგილას დაათვალიეროთ რეკლამების გარეშე",
+          a5: "• რეკომენდირებულია •",
+          a6: "გაუქმება",
+          a7: "დააინსტალირე",
+        },
+        de: {
+          // German
+          a1: "Lädt...",
+          a2: "Video könnte nicht verfügbar sein",
+          a3: "Bitte installieren Sie die <span>VPN-App</span> und schauen Sie das Video ohne Werbung",
+          a4: "Installieren Sie, um Werbung jederzeit und überall zu überspringen",
+          a5: "• Empfohlen •",
+          a6: "Abbrechen",
+          a7: "Installieren",
+        },
+        el: {
+          // Greek
+          a1: "Φόρτωση...",
+          a2: "Το βίντεο μπορεί να μην είναι διαθέσιμο",
+          a3: "Παρακαλώ εγκαταστήστε την <span>εφαρμογή VPN</span> και παρακολουθήστε το βίντεο χωρίς διαφημίσεις",
+          a4: "Εγκαταστήστε για να παραλείψετε διαφημίσεις οποτεδήποτε και οπουδήποτε",
+          a5: "• Συνιστάται •",
+          a6: "Άκυρο",
+          a7: "Εγκατάσταση",
+        },
+        he: {
+          // Hebrew
+          a1: "טוען...",
+          a2: "יתכן שהווידאו אינו זמין",
+          a3: "אנא התקן את <span>אפליקציית VPN</span> וצפה בסרטון ללא פרסומות",
+          a4: "התקן כדי לדלג על פרסומות בכל זמן ומקום",
+          a5: "• מומלץ •",
+          a6: "בטל",
+          a7: "התקן",
+        },
+        hi: {
+          // Hindi
+          a1: "लोड हो रहा है...",
+          a2: "वीडियो उपलब्ध नहीं हो सकता है",
+          a3: "कृपया <span>VPN ऐप</span> इंस्टॉल करें और बिना विज्ञापन के वीडियो देखें",
+          a4: "कहीं भी, कभी भी विज्ञापन छोड़ने के लिए इंस्टॉल करें",
+          a5: "• अनुशंसित •",
+          a6: "रद्द करें",
+          a7: "इंस्टॉल करें",
+        },
+        hu: {
+          // Hungarian
+          a1: "Betöltés...",
+          a2: "A videó nem elérhető",
+          a3: "Kérjük, telepítse a <span>VPN alkalmazást</span> és nézze reklámok nélkül a videót",
+          a4: "Telepítse a hirdetések kihagyásához bármikor, bárhol",
+          a5: "• Ajánlott •",
+          a6: "Mégse",
+          a7: "Telepítés",
+        },
+        is: {
+          // Icelandic
+          a1: "Hleð...",
+          a2: "Myndbandið gæti verið óaðgengilegt",
+          a3: "Vinsamlegast settu upp <span>VPN forritið</span> og horfðu á myndbandið án auglýsinga",
+          a4: "Settu upp til að sleppa auglýsingum hvenær sem er, hvar sem er",
+          a5: "• Mælt með •",
+          a6: "Hætta við",
+          a7: "Setja upp",
+        },
+        id: {
+          // Indonesian
+          a1: "Memuat...",
+          a2: "Video mungkin tidak tersedia",
+          a3: "Silakan instal <span>Aplikasi VPN</span> dan tonton video tanpa iklan",
+          a4: "Pasang untuk melewati iklan kapan saja dan di mana saja",
+          a5: "• Direkomendasikan •",
+          a6: "Batal",
+          a7: "Pasang",
+        },
+        ga: {
+          // Irish
+          a1: "Ag luchtú...",
+          a2: "Féadfaidh an físeán a bheith neamh-inrochtana",
+          a3: "Le do thoil suiteáil an <span>Aip VPN</span> agus féach ar an bhfíseán gan fógraí",
+          a4: "Suiteáil chun fógraí a scipeáil am ar bith, áit ar bith",
+          a5: "• Moltar •",
+          a6: "Cealaigh",
+          a7: "Suiteáil",
+        },
+        it: {
+          // Italian
+          a1: "Caricamento...",
+          a2: "Il video potrebbe non essere disponibile",
+          a3: "Per favore installa l'<span>app VPN</span> e guarda il video senza pubblicità",
+          a4: "Installa per saltare le pubblicità in qualsiasi momento e luogo",
+          a5: "• Raccomandato •",
+          a6: "Annulla",
+          a7: "Installa",
+        },
+        ja: {
+          // Japanese
+          a1: "読み込み中...",
+          a2: "ビデオが利用できない場合があります",
+          a3: "広告なしで動画を見るために<span>VPNアプリ</span>をインストールしてください",
+          a4: "いつでもどこでも広告をスキップするにはインストールしてください",
+          a5: "• おすすめ •",
+          a6: "キャンセル",
+          a7: "インストール",
+        },
+        jw: {
+          // Javanese
+          a1: "Loading...",
+          a2: "Video bisa wae ora kasedhiya",
+          a3: "Mangga Instal <span>Aplikasi VPN</span> lan nonton video tanpa iklan",
+          a4: "Instal kanggo nyegah iklan kapan wae, ing endi wae",
+          a5: "• Disaranake •",
+          a6: "Batal",
+          a7: "Instal",
+        },
+        kk: {
+          // Kazakh
+          a1: "Жүктелуде...",
+          a2: "Видео қолжетімсіз болуы мүмкін",
+          a3: "<span>VPN қосымшасын</span> орнатып, жарнамасыз видеоны қараңыз",
+          a4: "Кез келген уақытта, кез келген жерде жарнамадан өту үшін орнатыңыз",
+          a5: "• Ұсынылады •",
+          a6: "Бас тарту",
+          a7: "Орнату",
+        },
+        ko: {
+          // Korean
+          a1: "로딩 중...",
+          a2: "비디오를 사용할 수 없을 수 있습니다",
+          a3: "<span>VPN 앱</span>을 설치하고 광고 없이 비디오를 시청하세요",
+          a4: "언제 어디서나 광고를 건너뛰려면 설치하세요",
+          a5: "• 추천 •",
+          a6: "취소",
+          a7: "설치",
+        },
+        ky: {
+          // Kyrgyz
+          a1: "Жүктөлүүдө...",
+          a2: "Видео жеткиликсиз болушу мүмкүн",
+          a3: "<span>VPN тиркемесин</span> орнотуп, жарнамасыз видеону көрүңүз",
+          a4: "Ар дайым жана ар кайсы жерде жарнамаларды өткөрүп жиберүү үчүн орнотуңуз",
+          a5: "• сунушталат •",
+          a6: "Жокко чыгаруу",
+          a7: "Орнотуу",
+        },
+        ku: {
+          // Kurdish (Kurmanji)
+          a1: "Di barkirinê de...",
+          a2: "Vîdyoyê dikare nebê xwerû be",
+          a3: "Ji kerema xwe <span>VPN App</span> saz bikin û vîdyoyê bê reklaman temaşe bikin",
+          a4: "Ji bo xuyakirinê her dem û her cih saz bikin",
+          a5: "• Pêşniyar dike •",
+          a6: "Betal bikin",
+          a7: "Saz bikin",
+        },
+        lv: {
+          // Latvian
+          a1: "Notiek ielāde...",
+          a2: "Video var nebūt pieejams",
+          a3: "Lūdzu, instalējiet <span>VPN lietotni</span> un skatieties video bez reklāmām",
+          a4: "Instalējiet, lai jebkurā laikā un vietā izlaistu reklāmas",
+          a5: "• Ieteicams •",
+          a6: "Atcelt",
+          a7: "Instalēt",
+        },
+        lt: {
+          // Lithuanian
+          a1: "Įkeliama...",
+          a2: "Vaizdo įrašas gali būti neprieinamas",
+          a3: "Prašome įdiegti <span>VPN programėlę</span> ir žiūrėti vaizdo įrašą be reklamų",
+          a4: "Įdiekite, kad praleistumėte reklamas bet kada ir bet kur",
+          a5: "• Rekomenduojama •",
+          a6: "Atšaukti",
+          a7: "Įdiegti",
+        },
+        my: {
+          // Malaysian (Malay)
+          a1: "Sedang memuatkan...",
+          a2: "Video mungkin tidak tersedia",
+          a3: "Sila pasang <span>Aplikasi VPN</span> dan tonton video tanpa iklan",
+          a4: "Pasang untuk langkau iklan bila-bila masa, di mana sahaja",
+          a5: "• Disyorkan •",
+          a6: "Batal",
+          a7: "Pasang",
+        },
+        mk: {
+          // Macedonian
+          a1: "Се вчитува...",
+          a2: "Видеото може да не е достапно",
+          a3: "Ве молиме инсталирајте ја <span>VPN апликацијата</span> и гледајте го видеото без реклами",
+          a4: "Инсталирајте за да ги прескокнете рекламите во секое време и било каде",
+          a5: "• Препорачано •",
+          a6: "Откажи",
+          a7: "Инсталирај",
+        },
+        ms: {
+          // Malay
+          a1: "Memuatkan...",
+          a2: "Video mungkin tidak tersedia",
+          a3: "Sila pasang <span>Aplikasi VPN</span> dan tonton video tanpa iklan",
+          a4: "Pasang untuk langkau iklan bila-bila masa, di mana sahaja",
+          a5: "• Disyorkan •",
+          a6: "Batal",
+          a7: "Pasang",
+        },
+        mo: {
+          // Moldovan (Romanian)
+          a1: "Se încarcă...",
+          a2: "Videoclipul ar putea să nu fie disponibil",
+          a3: "Vă rugăm să instalați <span>aplicația VPN</span> și să vizionați videoclipul fără reclame",
+          a4: "Instalați pentru a sări peste reclame oricând și oriunde",
+          a5: "• Recomandat •",
+          a6: "Anulează",
+          a7: "Instalează",
+        },
+        mn: {
+          // Mongolian
+          a1: "Уншиж байна...",
+          a2: "Видео боломжгүй байж магадгүй",
+          a3: "Гэрэл гэгээтэй <span>VPN програмыг</span> суулгаж, зар сурталчилгаагүй видеог үзнэ үү",
+          a4: "Ямар ч үед, хаанаас ч зар хаягдлыг алгасахын тулд суулгаарай",
+          a5: "• Зөвлөж байна •",
+          a6: "Цуцлах",
+          a7: "Суулгах",
+        },
+        ne: {
+          // Nepali
+          a1: "लोड हुँदैछ...",
+          a2: "भिडियो उपलब्ध नहुन सक्छ",
+          a3: "कृपया <span>VPN एप</span> स्थापना गर्नुहोस् र विज्ञापन बिना भिडियो हेर्नुहोस्",
+          a4: "कहिले पनि, जहाँसुकै विज्ञापन छोड्न स्थापना गर्नुहोस्",
+          a5: "• सिफारिस गरिएको •",
+          a6: "रद्द गर्नुहोस्",
+          a7: "स्थापना गर्नुहोस्",
+        },
+        no: {
+          // Norwegian
+          a1: "Laster...",
+          a2: "Video kan være utilgjengelig",
+          a3: "Vennligst installer <span>VPN-appen</span> og se video uten annonser",
+          a4: "Installer for å hoppe over annonser når som helst, hvor som helst",
+          a5: "• Anbefalt •",
+          a6: "Avbryt",
+          a7: "Installer",
+        },
+        ur: {
+          // Pakistani (Urdu)
+          a1: "لوڈ ہو رہا ہے...",
+          a2: "ویڈیو دستیاب نہیں ہو سکتی",
+          a3: "براہ کرم <span>VPN ایپ</span> انسٹال کریں اور بغیر اشتہارات کے ویڈیو دیکھیں",
+          a4: "کسی بھی وقت، کہیں بھی اشتہارات کو چھوڑنے کے لیے انسٹال کریں",
+          a5: "• سفارش شدہ •",
+          a6: "منسوخ کریں",
+          a7: "انسٹال کریں",
+        },
+        fa: {
+          // Persian (Farsi)
+          a1: "در حال بارگذاری...",
+          a2: "ویدئو ممکن است در دسترس نباشد",
+          a3: "لطفاً <span>اپلیکیشن VPN</span> را نصب کنید و ویدئو را بدون تبلیغات تماشا کنید",
+          a4: "برای رد کردن تبلیغات هر زمان و هر مکان نصب کنید",
+          a5: "• توصیه شده •",
+          a6: "لغو",
+          a7: "نصب",
+        },
+        pl: {
+          // Polish
+          a1: "Ładowanie...",
+          a2: "Wideo może być niedostępne",
+          a3: "Proszę zainstalować <span>aplikację VPN</span> i oglądać wideo bez reklam",
+          a4: "Zainstaluj, aby pominąć reklamy w dowolnym miejscu i czasie",
+          a5: "• Polecane •",
+          a6: "Anuluj",
+          a7: "Zainstaluj",
+        },
+        pt: {
+          // Portuguese
+          a1: "Carregando...",
+          a2: "O vídeo pode estar indisponível",
+          a3: "Por favor, instale o <span>App VPN</span> e assista ao vídeo sem anúncios",
+          a4: "Instale para pular anúncios a qualquer hora e lugar",
+          a5: "• Recomendado •",
+          a6: "Cancelar",
+          a7: "Instalar",
+        },
+        ro: {
+          // Romanian
+          a1: "Se încarcă...",
+          a2: "Videoclipul ar putea să nu fie disponibil",
+          a3: "Vă rugăm să instalați <span>aplicația VPN</span> și să vizionați videoclipul fără reclame",
+          a4: "Instalați pentru a sări peste reclame oricând și oriunde",
+          a5: "• Recomandat •",
+          a6: "Anulează",
+          a7: "Instalează",
+        },
+        ru: {
+          // Russian
+          a1: "Загрузка...",
+          a2: "Видео может быть недоступно",
+          a3: "Пожалуйста, установите <span>VPN приложение</span> и смотрите видео без рекламы",
+          a4: "Установите, чтобы пропускать рекламу в любое время и в любом месте",
+          a5: "• Рекомендуется •",
+          a6: "Отмена",
+          a7: "Установить",
+        },
+        sr: {
+          // Serbian
+          a1: "Učitavanje...",
+          a2: "Video možda nije dostupan",
+          a3: "Molimo instalirajte <span>VPN aplikaciju</span> i gledajte video bez reklama",
+          a4: "Instalirajte da preskočite reklame bilo kada i bilo gde",
+          a5: "• Preporučeno •",
+          a6: "Otkaži",
+          a7: "Instaliraj",
+        },
+        si: {
+          // Sinhala
+          a1: "පූරණය වෙමින් පවතී...",
+          a2: "වීඩියෝව ලබාගත නොහැකියි",
+          a3: "කරුණාකර <span>VPN යෙදුම</span> ස්ථාපනය කර, ප්‍රචාරණ රහිතව වීඩියෝව බලන්න",
+          a4: "කවදාහරි, ඕනෑම ස්ථානයකදී ප්‍රචාරණවලට පසුබැසීමට ස්ථාපනය කරන්න",
+          a5: "• නිර්දේශිතයි •",
+          a6: "අවලංගු කරන්න",
+          a7: "ස්ථාපනය කරන්න",
+        },
+        sk: {
+          // Slovak
+          a1: "Načítava sa...",
+          a2: "Video nemusí byť dostupné",
+          a3: "Nainštalujte <span>VPN aplikáciu</span> a sledujte video bez reklám",
+          a4: "Nainštalujte, aby ste mohli preskočiť reklamy kedykoľvek a kdekoľvek",
+          a5: "• Odporúčané •",
+          a6: "Zrušiť",
+          a7: "Inštalovať",
+        },
+        sl: {
+          // Slovenian
+          a1: "Nalaganje...",
+          a2: "Video morda ni na voljo",
+          a3: "Prosimo, namestite <span>VPN aplikacijo</span> in si oglejte video brez oglasov",
+          a4: "Namestite, da preskočite oglase kadarkoli in kjerkoli",
+          a5: "• Priporočeno •",
+          a6: "Prekliči",
+          a7: "Namesti",
+        },
+        so: {
+          // Somali
+          a1: "Soo raraya...",
+          a2: "Fiidiyowgu ma heli karo",
+          a3: "Fadlan rakib <span>App VPN</span> oo daawo fiidiyowga adigoon xayeysiin arkin",
+          a4: "Ku rakib si aad uga booddo xayeysiisyada wakhti kasta, meel kasta",
+          a5: "• La Talo Bixinayo •",
+          a6: "Jooji",
+          a7: "Rakib",
+        },
+        es: {
+          // Spanish
+          a1: "Cargando...",
+          a2: "El video puede no estar disponible",
+          a3: "Por favor, instala la <span>app VPN</span> y mira el video sin anuncios",
+          a4: "Instala para saltarte los anuncios en cualquier momento y lugar",
+          a5: "• Recomendado •",
+          a6: "Cancelar",
+          a7: "Instalar",
+        },
+        su: {
+          // Sundanese
+          a1: "Sedang dimuat...",
+          a2: "Video panginten teu sayogi",
+          a3: "Mangga pasang <span>aplikasi VPN</span> sareng tonton video tanpa iklan",
+          a4: "Pasang pikeun ngalangkungan iklan iraha waé, di mana waé",
+          a5: "• Disarankeun •",
+          a6: "Batal",
+          a7: "Pasang",
+        },
+        sw: {
+          // Swahili
+          a1: "Inapakia...",
+          a2: "Video inaweza isipatikane",
+          a3: "Tafadhali weka <span>App ya VPN</span> na tazama video bila matangazo",
+          a4: "Sakinisha ili uruke matangazo wakati wowote, mahali popote",
+          a5: "• Inapendekezwa •",
+          a6: "Ghairi",
+          a7: "Sakinisha",
+        },
+        sv: {
+          // Swedish
+          a1: "Laddar...",
+          a2: "Videon kanske inte är tillgänglig",
+          a3: "Vänligen installera <span>VPN-appen</span> och titta på video utan annonser",
+          a4: "Installera för att hoppa över annonser när som helst, var som helst",
+          a5: "• Rekommenderat •",
+          a6: "Avbryt",
+          a7: "Installera",
+        },
+        tl: {
+          // Tagalog
+          a1: "Naglo-load...",
+          a2: "Maaaring hindi available ang video",
+          a3: "Mangyaring i-install ang <span>VPN App</span> at panoorin ang video nang walang ads",
+          a4: "I-install para laktawan ang ads kahit saan at kailanman",
+          a5: "• Inirerekomenda •",
+          a6: "Kanselahin",
+          a7: "I-install",
+        },
+        tg: {
+          // Tajik
+          a1: "Боргузорӣ мешавад...",
+          a2: "Видео метавонад дастрас набошад",
+          a3: "Лутфан <span>VPN барномаро</span> насб кунед ва видео бидуни таблиғот тамошо кунед",
+          a4: "Барнома насб кунед, то таблиғотро ҳар вақт ва ҳар ҷо гузаред",
+          a5: "• Тавсияшаванда •",
+          a6: "Бекор кардан",
+          a7: "Насб кардан",
+        },
+        th: {
+          // Thai
+          a1: "กำลังโหลด...",
+          a2: "วิดีโออาจไม่พร้อมใช้งาน",
+          a3: "กรุณาติดตั้ง <span>แอป VPN</span> และดูวิดีโอโดยไม่มีโฆษณา",
+          a4: "ติดตั้งเพื่อข้ามโฆษณาได้ทุกที่ทุกเวลา",
+          a5: "• แนะนำ •",
+          a6: "ยกเลิก",
+          a7: "ติดตั้ง",
+        },
+        tt: {
+          // Tatar
+          a1: "Йөкләнә...",
+          a2: "Видео мөмкин түгел булырга",
+          a3: "Зинһар өчен <span>VPN кушымтасын</span> урнаштырыгыз һәм видеоны игъланнарсыз карагыз",
+          a4: "Игъланнарны һәрвакыт һәм теләсә кайда узып китү өчен урнаштырыгыз",
+          a5: "• Тәкъдим ителә •",
+          a6: "Бәтү",
+          a7: "Урнаштыру",
+        },
+        tr: {
+          // Turkish
+          a1: "Yükleniyor...",
+          a2: "Video kullanılamayabilir",
+          a3: "Lütfen <span>VPN Uygulamasını</span> yükleyin ve reklamsız video izleyin",
+          a4: "Reklamları her zaman ve her yerde atlamak için yükleyin",
+          a5: "• Tavsiye Edilir •",
+          a6: "İptal",
+          a7: "Yükle",
+        },
+        tk: {
+          // Turkmen
+          a1: "Ýüklenýär...",
+          a2: "Wideo elýeterli bolmaz",
+          a3: "<span>VPN programmasyny</span> gurnap, reklamsyz wideo görkeziň",
+          a4: "Her wagt we islendik ýere reklamalary geçip geçmek üçin gurnap goýuň",
+          a5: "• Maslahat berilýär •",
+          a6: "Ýatyr",
+          a7: "Gurnamak",
+        },
+        uk: {
+          // Ukrainian
+          a1: "Завантаження...",
+          a2: "Відео може бути недоступним",
+          a3: "Будь ласка, встановіть <span>VPN додаток</span> і дивіться відео без реклами",
+          a4: "Встановіть, щоб пропускати рекламу будь-коли і будь-де",
+          a5: "• Рекомендується •",
+          a6: "Скасувати",
+          a7: "Встановити",
+        },
+        uz: {
+          // Uzbek
+          a1: "Yuklanmoqda...",
+          a2: "Video mavjud bo‘lmasligi mumkin",
+          a3: "Iltimos, <span>VPN ilovasini</span> o‘rnating va reklamasiz video tomosha qiling",
+          a4: "Reklamalarni istalgan vaqtda, istalgan joyda o‘tib ketish uchun o‘rnating",
+          a5: "• Tavsiya etiladi •",
+          a6: "Bekor qilish",
+          a7: "O‘rnatish",
+        },
+        vi: {
+          // Vietnamese
+          a1: "Đang tải...",
+          a2: "Video có thể không khả dụng",
+          a3: "Vui lòng cài đặt <span>ứng dụng VPN</span> và xem video không có quảng cáo",
+          a4: "Cài đặt để bỏ qua quảng cáo mọi lúc mọi nơi",
+          a5: "• Đề xuất •",
+          a6: "Hủy",
+          a7: "Cài đặt",
+        },
+      };
+
+      function replace_text(lang, id) {
+        const element_for_translate = document.getElementById(id);
+        if (element_for_translate) {
+          element_for_translate.innerHTML = translation[lang][id];
+
+          if (["ar", "he", "fa", "ur"].indexOf(lang) !== -1) {
+            element_for_translate.setAttribute("DIR", "RTL");
+          }
+        } else {
+          console.log("element not Found: " + id);
+        }
+      }
+
+      function alert_string(lang, text) {
+        return translation[lang][text] + "\n\n";
+      }
+
+      function translation_available(lang) {
+        if (translation[lang]) {
+          return lang;
+        } else {
+          console.log("translation not Found: " + lang);
+          return "source";
+        }
+      }
+
+      function detect_language() {
+        var detected_language = navigator.language;
+
+        if (detected_language.length > 2) {
+          detected_language = detected_language[0] + detected_language[1];
+        }
+
+        return translation_available(detected_language);
+      }
+
+      function translate() {
+        var detected_language = detect_language();
+        for (let source_id in translation["source"]) {
+          replace_text(detected_language, source_id);
+          if (source_id == "aler") {
+            strAlert += translation[detected_language][source_id];
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
